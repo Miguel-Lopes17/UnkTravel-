@@ -852,7 +852,6 @@ footer .footer {
 .repartimentoUm {
     width: 33.33%;
     margin-top: 10px;
-    background-color: blue;
 }
 
 .repartimentoUm li {
@@ -863,7 +862,6 @@ footer .footer {
 .repartimentoDois {
     width: 33.33%;
     margin-top: 10px;
-    background-color: red;
 }
 
 .repartimentoDois li {
@@ -874,7 +872,6 @@ footer .footer {
 .repartimentoTres {
     width: 33.33%;
     margin-top: 10px;
-    background-color: green;
 }
 
 .repartimentoTres li {
