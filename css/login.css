@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lilita+One&display=swap');
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.containerimg{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+.imgcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 65%;
+    background-color: greenyellow;
+}
+
+.containerlogin {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.logincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 25%;
+    height: 60%;
+    width: 30%;
+    background-color: blue;
+    z-index: 1;
+}
+
+.password{
+    display: none;
+}
+
+.containericon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2%;
+    width: 5%;
+    position: absolute;
+    z-index: 999;
+    background-color: #ff0000;
+}
+
+/* fuction mover() */
+
+.username.mover {
+    display: none;
+}
+
+.password.mover {
+    display: block;
+}
+
+.containerimg, .containerlogin, .logincontainer {
+    transition: transform 0.5s ease;
+}
+
+.containerimg {
+    transform: translateX(0);
+}
+
+.containerlogin {
+    transform: translateX(0);
+}
+
+.containerimg.mover {
+    transform: translateX(-35%);
+}
+
+.containerlogin.mover {
+    transform: translateX(20%);
+}
+
+.logincontainer.mover {
+    transform: translateX(2%);
+}
+
+
+
+
