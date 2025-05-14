@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lilita+One&display=swap');
+
 /* Reset e estilos base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -372,7 +373,7 @@ a{
     justify-content: center;
     align-items: center;
     height: 13vh;
-    background: #00e5e5;
+    background: #3abaff;
     gap: 40px;
     color: aliceblue;
     flex-wrap: wrap;
@@ -735,10 +736,21 @@ a{
 
 /* container-flip */
 
-.travel {
-    min-height: 15vh;
-    text-align: center;
-    margin-top: 50px;
+.type-travel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    gap: 20px;
+    /* background-color: #0c0c0c; */
+    overflow: hidden;
+    position: relative;
+}
+
+.type-travel h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 
@@ -747,15 +759,14 @@ a{
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    min-height: 100vh;
-    margin-top: -5%;
     gap: 30px;
+    height: 65vh;
 }
 
 .container-flip {
     position: relative;
     width: 290px;
-    height: 400px;
+    height: 350px;
     perspective: 1000px; /* Adicione isso para melhor efeito 3D */
 }
 
@@ -793,31 +804,87 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    position: relative;
+}
+
+.back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-right: 20px solid #3abaff;
+    border-top: 20px solid #3abaff;
 }
 
 .front h1 {
     font-size: 1.2em;
-    margin-bottom: 20px;
-    margin: 40px 0 0 20px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .front .image {
-    width: 80%;
-    height: 200px;
+    width: 60%;
+    height: 170px;
     border-radius: 20px;
-    background-color: #d0d0d0;
     margin: 0 auto;
     margin-top: 90px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }
 
 .back p {
     font-size: 1.2em;
     margin: 20px;
-    text-align: center;
+    
     width: 200px;
 }
 
+.back a {
+    color: #fff;
+    background-color: #3abaff;
+    padding: 10px;
+    width: 150px;
+    margin-top: 10%;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
+.back a:hover {
+    background-color: #01a8a8;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.card-flip.active .type-travel {
+    height: auto;
+}
+
+.secao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+#expandir {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: #3abaff;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
 
 
 

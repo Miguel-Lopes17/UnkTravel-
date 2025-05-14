@@ -9,7 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mediaquery.css">
-    
+
 
     <!-- Bibliotecas externas -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -18,6 +18,9 @@
 
     <!-- Link CSS Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body class="search-not-expanded">
@@ -63,95 +66,101 @@
                     </div>
 
                     <div class="tabcont">
-                    <div id="tabs-container">
-                        <div class="tab-buttons">
-                            <button class="tab-button active" onclick="changeTab('passagens')">Passagens</button>
-                            <button class="tab-button" onclick="changeTab('hoteis')">Hotéis</button>
-                            <button class="tab-button" onclick="changeTab('carros')">Carros</button>
+                        <div id="tabs-container">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" onclick="changeTab('passagens')">Passagens</button>
+                                <button class="tab-button" onclick="changeTab('hoteis')">Hotéis</button>
+                                <button class="tab-button" onclick="changeTab('carros')">Carros</button>
+                            </div>
+
+                            <div id="passagens-tab">
+                                <div class="trip-type">
+                                    <button class="trip-option active">Ida e volta</button>
+                                    <button class="trip-option">Só ida</button>
+                                    <button class="trip-option">Vários destinos</button>
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label">Origem</label>
+                                    <input type="text" class="input-field" placeholder="De onde você vai sair?"
+                                        id="origemInput" onkeyup="showSuggestions(this, 'origemSuggestions')">
+                                    <div class="suggestions" id="origemSuggestions"></div>
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label">Destino</label>
+                                    <input type="text" class="input-field" placeholder="Para onde você quer ir?"
+                                        id="destinoInput" onkeyup="showSuggestions(this, 'destinoSuggestions')">
+                                    <div class="suggestions" id="destinoSuggestions"></div>
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label">Ida</label>
+                                    <input type="date" class="input-field">
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label">Volta</label>
+                                    <input type="date" class="input-field">
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label">Viajantes e Classe</label>
+                                    <input type="text" class="input-field" placeholder="1 Viajante - Todas as classes"
+                                        readonly>
+                                </div>
+
+                                <button class="search-btn">Buscar</button>
+                            </div>
+
+                            <div id="hoteis-tab"> add informação </div>
+                            <div id="carros-tab"> add informação </div>
                         </div>
-
-                        <div id="passagens-tab">
-                            <div class="trip-type">
-                                <button class="trip-option active">Ida e volta</button>
-                                <button class="trip-option">Só ida</button>
-                                <button class="trip-option">Vários destinos</button>
-                            </div>
-
-                            <div class="input-group">
-                                <label class="input-label">Origem</label>
-                                <input type="text" class="input-field" placeholder="De onde você vai sair?"
-                                    id="origemInput" onkeyup="showSuggestions(this, 'origemSuggestions')">
-                                <div class="suggestions" id="origemSuggestions"></div>
-                            </div>
-
-                            <div class="input-group">
-                                <label class="input-label">Destino</label>
-                                <input type="text" class="input-field" placeholder="Para onde você quer ir?"
-                                    id="destinoInput" onkeyup="showSuggestions(this, 'destinoSuggestions')">
-                                <div class="suggestions" id="destinoSuggestions"></div>
-                            </div>
-
-                            <div class="input-group">
-                                <label class="input-label">Ida</label>
-                                <input type="date" class="input-field">
-                            </div>
-
-                            <div class="input-group">
-                                <label class="input-label">Volta</label>
-                                <input type="date" class="input-field">
-                            </div>
-
-                            <div class="input-group">
-                                <label class="input-label">Viajantes e Classe</label>
-                                <input type="text" class="input-field" placeholder="1 Viajante - Todas as classes"
-                                    readonly>
-                            </div>
-
-                            <button class="search-btn">Buscar</button>
-                        </div>
-
-                        <div id="hoteis-tab">   add informação    </div>
-                        <div id="carros-tab">   add informação    </div>
                     </div>
                 </div>
             </div>
-        </div>
         </main>
     </div>
 
-    
-        <section class="service">
-            <div class="icon">
-                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAhRJREFUSEvtlLuLE1EUxr+TGTDJ3DtJkBS6Qlzwv7BxQUEsFGxsLCz9GywEQbGw1kZQEw0i2wuBhbVxt7OxUpT1AQoBzWPyUibz6cBsmI03j9XETZHbXeac8zvfd85cwQEdOSAuluD/5vzS6j1Wk7Ta7falIAh2XNfdnuUcRlrdarXOkLwH4EQEfEOyaFlW0XGcL//axEhwtVpVqVTqDoCrQxAC2BCRkuM46yLyw9QEyYTneScBnBeRVRG5oZR6vRs7cbk8z1sj+VBECgZAC0CZZMl13S2Sh5rN5mnLsi6SvADgcCynorU+OzU4DByjPt7LewBHAKRHjOGT1nrQ/ETF8SKhegAlAMf2O2MRua2UumZU7HleXin1TUSCUYVD9clk8pmInJsC3heR5wDuKqUq8fiB4k6ns+L7/ksR8Une1FqXhhuo1+urtm1fJ3kZgD0G/ApAMQiCJ5lM5rspbgDudruFEAxgJQp8R/JW2ECj0ShMAfxKsvw7/77rum8nubFnxrVa7bht2yH8aCzxc3S3DMV+AlhPJBLldDpdGTei4dw/lsug3NT8Vmhlr9d7ms/nvUnqxlod/2iCk/woIo/7/f6DbDa78zcw43INF4psr5DcDl8ppdSmiISv1kzOvv7jmRCjIosBjuy9Mktlu7V833+Uy+U+jHq5TgHYnAcYwJrW+sVigeek1Fh2MZZrqXieDvwC7lPMH5HunycAAAAASUVORK5CYII="/>Passagens</a>
-            </div>
-            <div class="icon">
-                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQlJREFUSEvtlzFOAzEQRedrKVLsyFegIOcAmkhIdIFQ5iiIo1CCtiRdJJJzkIIrWLMFRVYfNiJoi2wUeyMs0LqyJY/feOYVNiTRQCKu7AV774dZll2TdCEJAvBVVb04597a4lrBZVmOSM5E5CQE2ti7BnCV5/l8V3wr2MwKERlHQrdhharehoIXInLeEbxU1Ys/C37YZk7yFMC0XpN8BPDeuNV9Y979xqr644OZ1eV7/QZcfpWzbstmmBn/BzhSsu6lTgnu5fodq1P2OIZ9FKt7uXq5dsl3FLmSWd2DD6lAVI+fRGRyyOl79jyr6l3QY897fwbgBsAgBk7yg2ThnFsFgWNgITHJ/k6f3N7lH/lOh9AAAAAASUVORK5CYII="/>Hotéis</a>
-            </div>
-            <div class="icon">
-                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYRJREFUSEvtVr1Ow0AMtq9ZqqujjJ0QfxNrX4CuTEiAEAswMPEQFHgHRiSQGFCFxMYKD9CVgYEfMXVrVTdiKiapEhTSn7uoFUUi2c5nf5/t2GcjzOjDGfGCFbGIYKfTWVNKVQBAjXD2UynV0Frf2QRjRczMtwCwbgMIANdEtGPSNRIz8woAPJqAkve9Xm/Z87zncTY2xKsAcB+BVInoYRggM1vpxbZ/g7jZbOpSqbQpIguxZyIyj4h74TmQXyLi27CIx+kF9q9a6zoifgxE3Gq1PMdxGgCwlOV/ZtB98n2/Ui6X/dDmO9XMfAgAZxmAMquKyIHruudp4uMgm7UU2gkRhXJgZrFhIqJ+MMw8Fi8ZcU4cZixPtbG+8uIa1Z55O+Uv1688IEfhS5Wswmj+XkSyeAsx9XI1mt378RxPGNSI6DQ9nbbDRc2EOuH9FhHd/CAWEdXtdusAsDEh+FBzEbkiol1E7I/XgZ2r3W4vFgqFuWmSO47zUiwW35OYxmVvmg78b+Iv9A4uLjDU64QAAAAASUVORK5CYII="/>Pacotes</a>
-            </div>
-            <div class="icon">
-                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA0hJREFUSEvFVkloFEEUfb9nDEm6qiQeAiKINxcwiFFBBQ2IO6iIS7y4xbuKl5iruF00nhVDEBJcUFFEETcUlbgd1INeI4gQNE5XNQEN/U2FmjAz9sxUJJKChqaW937995ciTNKgSeLFuIhzudzGTCbzWwhxv9DgOI43MPNUIUSv70W8ibXWLQAeW2Bmfk1E7URUkyTJMSJa5OZXKKWe+ZB7ETNz1hjzEcDsKqCfhRDzieh3NfJU4oGBAVlbW7sPwDQHMA/A9mpgbv0ygE/u//vQ0FBXY2OjKT2bShxFURsRXfAkqriNmfcrpbp8iTuI6PgEER9VSp3yJT46EjgnUoj7nfuFr1HM7EfMzFOMMd0AdhWCE9HhMAzPAagxxvQA2JpfJ6KLSZLYoFqcYlCPEGJvacAVaRxF0XKn7ZxSgOHh4YaGhoafdl5rbQPtiv0noldhGC4HEGitzxPR7hTyT8zcppR6MWZs/scYs5aZ71qsNDcy82al1C1HfBbAoZHvZyaTaaqvr//CzNYTfQAWlJGBAaySUo7WgjESW32SJLlTTjsiigFcZeYZFsDekJk3KaVuO2M6ARyspD0RrRZCPCgidoefA1jmGTidUsrDdm8URZuJ6GaVcy+llGPYRW6N43hhkiRvqxHbkmlBiGh4cHBwVjabfQ9AVjoXBEFzGIbv/tLYTuRyuSVBEFidKo1cNpttqqur63cZ8BJAczVjgyBYHIbhm1RirbWNuqVVdFovhLjnq2sB1gsppY3+0THmahfVo4DlBjOfUUodcbpuIaIbABIAD5n5WxAEW5k5rABho/pREbHWepuN2gqkpbp+ACCI6KQQosOeM8ascymZBmPTaZuU8noRsbtF2QLCzN1SygPWSyPeKdS1VUppOxLiOJ6eJMnXFNbyBSS/2QXMJQA7SwFsNAdB8JGZbcvMj5tCiFYAv7TWtsaXNpdeIcSeiiUzjxRFUbkmUU4J229/AJiZYqxfk3Aun7S2ODkPgZSnz1wAOyqlWsHavz99UnSyPdqmz/997KXdTGu9EsCT0Rwk6mPmdtehTrvnrc3TFinlUx/PeD1v80DGmDUj1UtJKa8VgtviQ0QmX0onnNgH0HfPuG7sC+qz7w9bGXsuSI5wGAAAAABJRU5ErkJggg=="/>Ofertas</a>
-            </div>
-            <div class="icon">
-                <a href="#">Aluguéis</a>
-            </div>
-            <div class="icon">
-                <a href="#">Carros</a>
-            </div>
-            <div class="icon">
-                <a href="#">Ônibus</a>
-            </div>
-            <div class="icon">
-                <a href="#"><img id="promo" src="img/discount.png" alt="" width="25">Promoções</a>
-            </div>
-            <div class="icon">
-                <a href="#">Passeios</a>
-            </div>
-        </section>
+
+    <section class="service">
+        <div class="icon">
+            <a href="#"><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAhRJREFUSEvtlLuLE1EUxr+TGTDJ3DtJkBS6Qlzwv7BxQUEsFGxsLCz9GywEQbGw1kZQEw0i2wuBhbVxt7OxUpT1AQoBzWPyUibz6cBsmI03j9XETZHbXeac8zvfd85cwQEdOSAuluD/5vzS6j1Wk7Ta7falIAh2XNfdnuUcRlrdarXOkLwH4EQEfEOyaFlW0XGcL//axEhwtVpVqVTqDoCrQxAC2BCRkuM46yLyw9QEyYTneScBnBeRVRG5oZR6vRs7cbk8z1sj+VBECgZAC0CZZMl13S2Sh5rN5mnLsi6SvADgcCynorU+OzU4DByjPt7LewBHAKRHjOGT1nrQ/ETF8SKhegAlAMf2O2MRua2UumZU7HleXin1TUSCUYVD9clk8pmInJsC3heR5wDuKqUq8fiB4k6ns+L7/ksR8Une1FqXhhuo1+urtm1fJ3kZgD0G/ApAMQiCJ5lM5rspbgDudruFEAxgJQp8R/JW2ECj0ShMAfxKsvw7/77rum8nubFnxrVa7bht2yH8aCzxc3S3DMV+AlhPJBLldDpdGTei4dw/lsug3NT8Vmhlr9d7ms/nvUnqxlod/2iCk/woIo/7/f6DbDa78zcw43INF4psr5DcDl8ppdSmiISv1kzOvv7jmRCjIosBjuy9Mktlu7V833+Uy+U+jHq5TgHYnAcYwJrW+sVigeek1Fh2MZZrqXieDvwC7lPMH5HunycAAAAASUVORK5CYII=" />Passagens</a>
+        </div>
+        <div class="icon">
+            <a href="#"><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQlJREFUSEvtlzFOAzEQRedrKVLsyFegIOcAmkhIdIFQ5iiIo1CCtiRdJJJzkIIrWLMFRVYfNiJoi2wUeyMs0LqyJY/feOYVNiTRQCKu7AV774dZll2TdCEJAvBVVb04597a4lrBZVmOSM5E5CQE2ti7BnCV5/l8V3wr2MwKERlHQrdhharehoIXInLeEbxU1Ys/C37YZk7yFMC0XpN8BPDeuNV9Y979xqr644OZ1eV7/QZcfpWzbstmmBn/BzhSsu6lTgnu5fodq1P2OIZ9FKt7uXq5dsl3FLmSWd2DD6lAVI+fRGRyyOl79jyr6l3QY897fwbgBsAgBk7yg2ThnFsFgWNgITHJ/k6f3N7lH/lOh9AAAAAASUVORK5CYII=" />Hotéis</a>
+        </div>
+        <div class="icon">
+            <a href="#"><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYRJREFUSEvtVr1Ow0AMtq9ZqqujjJ0QfxNrX4CuTEiAEAswMPEQFHgHRiSQGFCFxMYKD9CVgYEfMXVrVTdiKiapEhTSn7uoFUUi2c5nf5/t2GcjzOjDGfGCFbGIYKfTWVNKVQBAjXD2UynV0Frf2QRjRczMtwCwbgMIANdEtGPSNRIz8woAPJqAkve9Xm/Z87zncTY2xKsAcB+BVInoYRggM1vpxbZ/g7jZbOpSqbQpIguxZyIyj4h74TmQXyLi27CIx+kF9q9a6zoifgxE3Gq1PMdxGgCwlOV/ZtB98n2/Ui6X/dDmO9XMfAgAZxmAMquKyIHruudp4uMgm7UU2gkRhXJgZrFhIqJ+MMw8Fi8ZcU4cZixPtbG+8uIa1Z55O+Uv1688IEfhS5Wswmj+XkSyeAsx9XI1mt378RxPGNSI6DQ9nbbDRc2EOuH9FhHd/CAWEdXtdusAsDEh+FBzEbkiol1E7I/XgZ2r3W4vFgqFuWmSO47zUiwW35OYxmVvmg78b+Iv9A4uLjDU64QAAAAASUVORK5CYII=" />Pacotes</a>
+        </div>
+        <div class="icon">
+            <a href="#"><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA0hJREFUSEvFVkloFEEUfb9nDEm6qiQeAiKINxcwiFFBBQ2IO6iIS7y4xbuKl5iruF00nhVDEBJcUFFEETcUlbgd1INeI4gQNE5XNQEN/U2FmjAz9sxUJJKChqaW937995ciTNKgSeLFuIhzudzGTCbzWwhxv9DgOI43MPNUIUSv70W8ibXWLQAeW2Bmfk1E7URUkyTJMSJa5OZXKKWe+ZB7ETNz1hjzEcDsKqCfhRDzieh3NfJU4oGBAVlbW7sPwDQHMA/A9mpgbv0ygE/u//vQ0FBXY2OjKT2bShxFURsRXfAkqriNmfcrpbp8iTuI6PgEER9VSp3yJT46EjgnUoj7nfuFr1HM7EfMzFOMMd0AdhWCE9HhMAzPAagxxvQA2JpfJ6KLSZLYoFqcYlCPEGJvacAVaRxF0XKn7ZxSgOHh4YaGhoafdl5rbQPtiv0noldhGC4HEGitzxPR7hTyT8zcppR6MWZs/scYs5aZ71qsNDcy82al1C1HfBbAoZHvZyaTaaqvr//CzNYTfQAWlJGBAaySUo7WgjESW32SJLlTTjsiigFcZeYZFsDekJk3KaVuO2M6ARyspD0RrRZCPCgidoefA1jmGTidUsrDdm8URZuJ6GaVcy+llGPYRW6N43hhkiRvqxHbkmlBiGh4cHBwVjabfQ9AVjoXBEFzGIbv/tLYTuRyuSVBEFidKo1cNpttqqur63cZ8BJAczVjgyBYHIbhm1RirbWNuqVVdFovhLjnq2sB1gsppY3+0THmahfVo4DlBjOfUUodcbpuIaIbABIAD5n5WxAEW5k5rABho/pREbHWepuN2gqkpbp+ACCI6KQQosOeM8ascymZBmPTaZuU8noRsbtF2QLCzN1SygPWSyPeKdS1VUppOxLiOJ6eJMnXFNbyBSS/2QXMJQA7SwFsNAdB8JGZbcvMj5tCiFYAv7TWtsaXNpdeIcSeiiUzjxRFUbkmUU4J229/AJiZYqxfk3Aun7S2ODkPgZSnz1wAOyqlWsHavz99UnSyPdqmz/997KXdTGu9EsCT0Rwk6mPmdtehTrvnrc3TFinlUx/PeD1v80DGmDUj1UtJKa8VgtviQ0QmX0onnNgH0HfPuG7sC+qz7w9bGXsuSI5wGAAAAABJRU5ErkJggg==" />Ofertas</a>
+        </div>
+        <div class="icon">
+            <a href="#">Aluguéis</a>
+        </div>
+        <div class="icon">
+            <a href="#">Carros</a>
+        </div>
+        <div class="icon">
+            <a href="#">Ônibus</a>
+        </div>
+        <div class="icon">
+            <a href="#"><img id="promo" src="img/discount.png" alt="" width="25">Promoções</a>
+        </div>
+        <div class="icon">
+            <a href="#">Passeios</a>
+        </div>
+    </section>
 
     <div class="slide-pacote">
-        <h1 class="title"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAThJREFUSEvtljFOQkEQhr9HS8MJDCCVrReQ1opECbFBCysPgcAdLEkgoTDGxI4WD2BLQQEa7kDsVEZ2yWbje28UIiTsdrs78/87s7M7f8SWRrQlXrTEYncKHAOZmMN+AC/AQBOMlvgJqGgAgXvgIs1WQ3wEjNKAvP0SMEny0RCfAEMDUgaeYwC1dt/uO0OcBc6BghNVHrg08x7wFhNxkt0r8AC8W1834pypysNf3qfWfGxexdxP9Q1wp0X5o9010PGJm8CtB9hazGVdxqeSzGYxEc9NdSCWzIZUa+orFJebpVXNhOcUfq5/+UAa5qdyq1D6b9csWBWS9pZFpci4cvq49ZGrbPvdqWaEWhrwOvtV4NEnFtkqKuFsHeQE3z5Qt+31J81VBA42TD4FZi6mRuxt+AxLuP0j/gLFRGgfqjmn4wAAAABJRU5ErkJggg=="/>   Pacotes de Viagem</h1>
+        <h1 class="title"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAThJREFUSEvtljFOQkEQhr9HS8MJDCCVrReQ1opECbFBCysPgcAdLEkgoTDGxI4WD2BLQQEa7kDsVEZ2yWbje28UIiTsdrs78/87s7M7f8SWRrQlXrTEYncKHAOZmMN+AC/AQBOMlvgJqGgAgXvgIs1WQ3wEjNKAvP0SMEny0RCfAEMDUgaeYwC1dt/uO0OcBc6BghNVHrg08x7wFhNxkt0r8AC8W1834pypysNf3qfWfGxexdxP9Q1wp0X5o9010PGJm8CtB9hazGVdxqeSzGYxEc9NdSCWzIZUa+orFJebpVXNhOcUfq5/+UAa5qdyq1D6b9csWBWS9pZFpci4cvq49ZGrbPvdqWaEWhrwOvtV4NEnFtkqKuFsHeQE3z5Qt+31J81VBA42TD4FZi6mRuxt+AxLuP0j/gLFRGgfqjmn4wAAAABJRU5ErkJggg==" />
+            Pacotes de Viagem</h1>
         <div class="card-slider swiper">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
@@ -160,62 +169,66 @@
                         <a href="#" class="card-link">
                             <img src="img/propa1.png" alt="Card image" class="card-image">
                             <p class="badge">Pacotes</p>
-                            <h2 class="card-title"><i class="fa-solid fa-plane"></i><box-icon type='solid' name='plane-take-off'></box-icon> Rio de Janeiro</h2>
+                            <h2 class="card-title"><i class="fa-solid fa-plane"></i><box-icon type='solid'
+                                    name='plane-take-off'></box-icon> Rio de Janeiro</h2>
                             <button class="card-button">
-                                <box-icon name='right-arrow-alt' color='#fff' ></box-icon>
+                                <box-icon name='right-arrow-alt' color='#fff'></box-icon>
                             </button>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="card-item">
                         <a href="#" class="card-link">
                             <img src="img/propa1.png" alt="Card image" class="card-image">
                             <p class="badge">Pacotes</p>
-                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de Janeiro</h2>
+                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de
+                                Janeiro</h2>
                             <button class="card-button">
-                                <box-icon name='right-arrow-alt' color='#fff' ></box-icon>
+                                <box-icon name='right-arrow-alt' color='#fff'></box-icon>
                             </button>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Slide 3 -->
                 <div class="swiper-slide">
                     <div class="card-item">
                         <a href="#" class="card-link">
                             <img src="img/propa1.png" alt="Card image" class="card-image">
                             <p class="badge">Pacotes</p>
-                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de Janeiro</h2>
+                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de
+                                Janeiro</h2>
                             <button class="card-button">
-                                <box-icon name='right-arrow-alt' color='#fff' ></box-icon>
+                                <box-icon name='right-arrow-alt' color='#fff'></box-icon>
                             </button>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Slides adicionais (repetidos para exemplo) -->
                 <div class="swiper-slide">
                     <div class="card-item">
                         <a href="#" class="card-link">
                             <img src="img/propa1.png" alt="Card image" class="card-image">
                             <p class="badge">Pacotes</p>
-                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de Janeiro</h2>
+                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de
+                                Janeiro</h2>
                             <button class="card-button">
-                                <box-icon name='right-arrow-alt' color='#fff' ></box-icon>
+                                <box-icon name='right-arrow-alt' color='#fff'></box-icon>
                             </button>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Mais slides conforme necessário -->
             </div>
-            
+
             <!-- Paginação -->
             <div class="swiper-pagination"></div>
-            
+
             <!-- Botões de navegação -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -228,7 +241,8 @@
             <div class="text-cardzin">
                 <h1><strong>Descubra destinos incríveis</strong></h1>
                 <h3><strong>com ótimo custo benefício</strong></h3>
-                <p>Quer viajar sem gastar muito e ainda viver experiências únicas? Explore lugares surpreendentes e fora do comum que cabem no seu orçamento!</p>
+                <p>Quer viajar sem gastar muito e ainda viver experiências únicas? Explore lugares surpreendentes e fora
+                    do comum que cabem no seu orçamento!</p>
                 <a class="link-cardzin" href="#">Explore Destinos</a>
             </div>
         </div>
@@ -238,7 +252,8 @@
             <div class="text-cardzin">
                 <h1><strong>Aventure-se pelo inesperado</strong></h1>
                 <h3><strong>com roteiros exclusivos</strong></h3>
-                <p>Fuja do óbvio e conheça lugares pouco explorados, cheios de cultura e belezas naturais. Deixe-nos te guiar para uma viagem inesquecível!</p>
+                <p>Fuja do óbvio e conheça lugares pouco explorados, cheios de cultura e belezas naturais. Deixe-nos te
+                    guiar para uma viagem inesquecível!</p>
                 <a class="link-cardzin" href="#">Ver opçoes de viagem</a>
             </div>
         </div>
@@ -267,7 +282,9 @@
     </section> -->
 
     <div class="slide-hospedagem">
-        <h1 class="title-h"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAAAbJJREFUaEPtmb1KA0EUhb9UllooRAW1t1CwVPzpLHwH9RHEQhDECCIIgo+gPoONnQpqq+ILaOFPIWJrpXshkcmymdnduRNcmYGFwM495+Tk5M7sbI0KjloFNRNFd+tX+5dOjwFytcYd8BnA0T5g0sB9BOTKHC6nG8C2UbkAXAQQPQ+cG7g7yWfhjqK1zQ7q9Iktax7fRP43y6Hi4aGrUKlqpgsxe0yOotcA6dW2sQhsGBP2gTNHjfTow1CZztOnV4AjQ8BqskAdO0QH7R5RtOF+UKc9GkKh0tLdYwo4BQYL0elMfgGWgNssuE4bplngUoffC2UauEkjZImuAw9AvxedTvEbMA58mHBZog+AdR1OFZRdYMslWjb5vSp0OiDvwIBN9AjwpMOlijIEvLYQ0/GQ4F+p0umAzQDXnUSnm7wOpT9K20qcdjqK9jf4FyE6rWimFSo6/Seclib+3C0lOXm+gWHb4iI4m8kR1RzQ0zzHGzXA7wOe5U0YPLIqy1neV3O3uefae5j341meJQ5BH7fyPNjmjGrbtCg6Zjpm2uJAJd+5lOkEwWtcL4qCCyhDUEnRP2A+fC590LZIAAAAAElFTkSuQmCC"/>   Hospedagem</h1>
+        <h1 class="title-h"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAAAbJJREFUaEPtmb1KA0EUhb9UllooRAW1t1CwVPzpLHwH9RHEQhDECCIIgo+gPoONnQpqq+ILaOFPIWJrpXshkcmymdnduRNcmYGFwM495+Tk5M7sbI0KjloFNRNFd+tX+5dOjwFytcYd8BnA0T5g0sB9BOTKHC6nG8C2UbkAXAQQPQ+cG7g7yWfhjqK1zQ7q9Iktax7fRP43y6Hi4aGrUKlqpgsxe0yOotcA6dW2sQhsGBP2gTNHjfTow1CZztOnV4AjQ8BqskAdO0QH7R5RtOF+UKc9GkKh0tLdYwo4BQYL0elMfgGWgNssuE4bplngUoffC2UauEkjZImuAw9AvxedTvEbMA58mHBZog+AdR1OFZRdYMslWjb5vSp0OiDvwIBN9AjwpMOlijIEvLYQ0/GQ4F+p0umAzQDXnUSnm7wOpT9K20qcdjqK9jf4FyE6rWimFSo6/Seclib+3C0lOXm+gWHb4iI4m8kR1RzQ0zzHGzXA7wOe5U0YPLIqy1neV3O3uefae5j341meJQ5BH7fyPNjmjGrbtCg6Zjpm2uJAJd+5lOkEwWtcL4qCCyhDUEnRP2A+fC590LZIAAAAAElFTkSuQmCC" />
+            Hospedagem</h1>
         <div class="card-slider swiper">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
@@ -276,62 +293,66 @@
                         <a href="#" class="card-link">
                             <img src="img/propa1.png" alt="Card image" class="card-image">
                             <p class="badge">Pacotes</p>
-                            <h2 class="card-title"><i class="fa-solid fa-plane"></i><box-icon type='solid' name='plane-take-off'></box-icon> Rio de Janeiro</h2>
+                            <h2 class="card-title"><i class="fa-solid fa-plane"></i><box-icon type='solid'
+                                    name='plane-take-off'></box-icon> Rio de Janeiro</h2>
                             <button class="card-button">
-                                <box-icon name='right-arrow-alt' color='#fff' ></box-icon>
+                                <box-icon name='right-arrow-alt' color='#fff'></box-icon>
                             </button>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="card-item">
                         <a href="#" class="card-link">
                             <img src="img/propa1.png" alt="Card image" class="card-image">
                             <p class="badge">Pacotes</p>
-                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de Janeiro</h2>
+                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de
+                                Janeiro</h2>
                             <button class="card-button">
-                                <box-icon name='right-arrow-alt' color='#fff' ></box-icon>
+                                <box-icon name='right-arrow-alt' color='#fff'></box-icon>
                             </button>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Slide 3 -->
                 <div class="swiper-slide">
                     <div class="card-item">
                         <a href="#" class="card-link">
                             <img src="img/propa1.png" alt="Card image" class="card-image">
                             <p class="badge">Pacotes</p>
-                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de Janeiro</h2>
+                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de
+                                Janeiro</h2>
                             <button class="card-button">
-                                <box-icon name='right-arrow-alt' color='#fff' ></box-icon>
+                                <box-icon name='right-arrow-alt' color='#fff'></box-icon>
                             </button>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Slides adicionais (repetidos para exemplo) -->
                 <div class="swiper-slide">
                     <div class="card-item">
                         <a href="#" class="card-link">
                             <img src="img/propa1.png" alt="Card image" class="card-image">
                             <p class="badge">Pacotes</p>
-                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de Janeiro</h2>
+                            <h2 class="card-title"><box-icon type='solid' name='plane-take-off'></box-icon> Rio de
+                                Janeiro</h2>
                             <button class="card-button">
-                                <box-icon name='right-arrow-alt' color='#fff' ></box-icon>
+                                <box-icon name='right-arrow-alt' color='#fff'></box-icon>
                             </button>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Mais slides conforme necessário -->
             </div>
-            
+
             <!-- Paginação -->
             <div class="swiper-pagination"></div>
-            
+
             <!-- Botões de navegação -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -346,7 +367,7 @@
             </div>
             <div class="text-d">
                 <div class="conteudo">
-                    <div class="count" style="background: blue;" ></div>
+                    <div class="count" style="background: blue;"></div>
                     <div class="count" style="background: blueviolet;"></div>
                     <div class="count" style="background: #e22b68;"></div>
                 </div>
@@ -359,14 +380,14 @@
             <div class="img-d">
                 <img src="" alt="">
             </div>
-                <div class="text-d">
-                    <div class="conteudo">
-                        <div class="count" style="background: red;"></div>
-                        <div class="count" style="background: orangered;"></div>
-                        <div class="count" style="background: yellow;"></div>
-                    </div>
-                    <h1><strong>21.000+</strong></h1>
-                    <h3>pesquisas nesta semana</h3>
+            <div class="text-d">
+                <div class="conteudo">
+                    <div class="count" style="background: red;"></div>
+                    <div class="count" style="background: orangered;"></div>
+                    <div class="count" style="background: yellow;"></div>
+                </div>
+                <h1><strong>21.000+</strong></h1>
+                <h3>pesquisas nesta semana</h3>
             </div>
         </div>
 
@@ -376,81 +397,111 @@
             </div>
             <div class="text-d">
                 <div class="conteudo">
-                    <i class='bx bxs-star' style='color:#ffae00' ></i>
-                    <i class='bx bxs-star' style='color:#ffae00' ></i>
-                    <i class='bx bxs-star' style='color:#ffae00' ></i>
-                    <i class='bx bxs-star' style='color:#ffae00' ></i>
-                    <i class='bx bxs-star' style='color:#ffae00' ></i>
+                    <i class='bx bxs-star' style='color:#ffae00'></i>
+                    <i class='bx bxs-star' style='color:#ffae00'></i>
+                    <i class='bx bxs-star' style='color:#ffae00'></i>
+                    <i class='bx bxs-star' style='color:#ffae00'></i>
+                    <i class='bx bxs-star' style='color:#ffae00'></i>
                 </div>
                 <h1>O mais querido pelos viajantes</h1>
                 <h3>Lorem ipsum dolor sit amet.</h3>
             </div>
-        </div>                                                                                                                              
-    </div>
-
-    <h1 class="travel">Que tipo de viagem você procura?</h1>
-    <div class="card-flip">
-        <div class="container-flip">
-            <div class="flip">
-                <div class="front">
-                    <h1><strong>Viagem de Lazer</strong></h1>
-                    <div class="image"></div>
-                </div>
-                <div class="back">
-                    <p>Para descansar, se divertir e conhecer novos lugares. Exemplo: férias na praia ou em uma cidade turística.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-flip">
-            <div class="flip">
-                <div class="front">
-                    <h1><strong>Viagem de Lazer</strong></h1>
-                    <div class="image"></div>
-                </div>
-                <div class="back">
-                    <p>parte de tras</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-flip">
-            <div class="flip">
-                <div class="front">
-                    <h1><strong>Viagem de Lazer</strong></h1>
-                    <div class="image"></div>
-                </div>
-                <div class="back">
-                    <p>parte de tras</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-flip">
-            <div class="flip">
-                <div class="front">
-                    <h1><strong>Viagem de Lazer</strong></h1>
-                    <div class="image"></div>
-                </div>
-                <div class="back">
-                    <p></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-flip">
-            <div class="flip">
-                <div class="front">
-                    <h1><strong>Viagem de Lazer</strong></h1>
-                    <div class="image"></div>
-                </div>
-                <div class="back">
-                    <p>parte de tras</p>
-                </div>
-            </div>
         </div>
     </div>
+
+    <div class="type-travel">
+        <h1>Que tipo de viagem você procura?</h1>
+        <div class="card-flip">
+            <div class="container-flip">
+                <div class="flip">
+                    <div class="front">
+                        <h1><strong>Viagem de Lazer</strong></h1>
+                        <div class="image"><img src="img/lazer.png" alt=""></div>
+                    </div>
+                    <div class="back">
+                        <p>Viagens para descansar, se divertir e conhecer novos lugares. Exemplo: férias na praia ou em
+                            uma
+                            cidade turística.
+                        </p>
+                        <a href="#">Ver mais...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-flip">
+                <div class="flip">
+                    <div class="front">
+                        <h1><strong>Viagem de Aventura</strong></h1>
+                        <div class="image"><img src="img/aventura.png" alt=""></div>
+                    </div>
+                    <div class="back">
+                        <p>Envolve esportes radicais, trilhas, montanhismo, mergulho, safáris, entre outros.</p>
+                        <a href="#">Ver mais...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-flip">
+                <div class="flip">
+                    <div class="front">
+                        <h1><strong>Viagem Cultural</strong></h1>
+                        <div class="image"><img src="img/cultural.png" alt=""></div>
+                    </div>
+                    <div class="back">
+                        <p>Focada em museus, patrimônios históricos, festivais e imersão na cultura local.</p>
+                        <a href="#">Ver mais...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-flip">
+                <div class="flip">
+                    <div class="front">
+                        <h1><strong>Viagem Gastronômica</strong></h1>
+                        <div class="image"><img src="img/gastronomica.png" alt=""></div>
+                    </div>
+                    <div class="back">
+                        <p>Exploração da culinária e bebidas típicas de diferentes regiões.</p>
+                        <a href="#">Ver mais...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-flip">
+                <div class="flip">
+                    <div class="front">
+                        <h1><strong>Viagem de Luxo</strong></h1>
+                        <div class="image"><img src="img/luxo.png" alt=""></div>
+                    </div>
+                    <div class="back">
+                        <p>Viagem de luxo é uma experiência sofisticada com conforto, exclusividade e serviços de alto
+                            padrão.</p>
+                        <a href="#">Ver mais...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-flip">
+                <div class="flip">
+                    <div class="front">
+                        <h1><strong>Viagem de Luxo</strong></h1>
+                        <div class="image"><img src="img/luxo.png" alt=""></div>
+                    </div>
+                    <div class="back">
+                        <p>Viagem de luxo é uma experiência sofisticada com conforto, exclusividade e serviços de alto
+                            padrão.</p>
+                        <a href="#">Ver mais...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="secao">
+        <button id="expandir">Expandir</button>
+    </div>
+
+
 
 
     <footer>
@@ -492,7 +543,7 @@
                 </ul>
             </div>
         </div>
-        
+
     </footer>,,
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
