@@ -8,7 +8,8 @@
     .scroll {
         height: 648px;
     }
- }
+
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
@@ -29,6 +30,44 @@
     .cardzin-mobile img {
         width: 200px;
     }
+
+    /* container-flip */
+
+    .container-flip {
+    width: 190px;
+    height: 230px;
+    }
+
+    .front .image {
+    width: 60%;
+    height: 90px;
+    margin-top: 50px;
+}
+
+.back p {
+    font-size: .8em;
+    margin: 20px;
+    width: 130px;
+    /* border: 1px solid red; */
+}
+
+.back a {
+    padding: 10px;
+    width: 100px;
+    margin-top: 10%;
+    font-size: .8em;
+}
+
+.front h1 {
+    font-size: .9em;
+    margin-top: 10%;
+}
+
+.type-h1 {
+    font-size: 0.6em;
+    margin-top: 10%;
+    text-align: center; 
+}
 }
 
 /* // Large devices (desktops, 992px and up) */
