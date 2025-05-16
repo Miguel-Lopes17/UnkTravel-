@@ -841,8 +841,10 @@ a {
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: #f5f7fa;
+    align-items: center;
+    background-color: #ffffff;
     height: 80vh;
 
 }
@@ -851,35 +853,80 @@ footer .footer {
     display: flex;
     border-top: 2px solid rgba(0, 0, 0, 0.212);
     width: 80%;
-    height: 100%;
+    height: 40vh;
+    margin-bottom: 0;
 }
 
-.repartimentoUm {
+footer .footer h2 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.repartimento {
     width: 33.33%;
     margin-top: 10px;
 }
 
-.repartimentoUm li {
+.repartimento ul li {
     display: flex;
     flex-direction: column;
 }
 
-.repartimentoDois {
-    width: 33.33%;
-    margin-top: 10px;
+.repartimento ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
 }
 
-.repartimentoDois li {
+footer .payments {
+    display: flex;
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+footer .method{
+    display: flex;
+    justify-content: left;
+    width: 80%;
+    gap: 20px;
+    border-bottom: 1px solid #00000023;
+}
+
+footer .method .cards-name h4, .others-name h4 {
+    color: #000;
+    font-size: 0.9rem;
+    margin-bottom: 20px
+}
+
+footer .method .footer-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .method .others {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+footer .social-media {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    height: 40vh;
+    margin-bottom: 0;
 }
 
-.repartimentoTres {
-    width: 33.33%;
-    margin-top: 10px;
+footer .social-media h2 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.repartimentoTres li {
-    display: flex;
-    flex-direction: column;
-}
