@@ -1,114 +1,103 @@
  /* Small devices (landscape phones, 576px and up) */
- @media (max-width: 576px) {
-     .slogan {
-         font-size: 28px;
-         margin: 4%;
-     }
+@media (max-width: 576px) {
+    .slogan {
+    font-size: 28px;
+    margin: 4%;
+    }
 
-     .scroll {
-         height: 648px;
-     }
+    .scroll {
+        height: 648px;
+    }
 
- }
+    .type-h1 {
+        text-align: center;
+        font-size: 1.6em;
+        margin-top: 5%;
+    }
+
+    .carrossel-container {
+        max-width: 50vw;
+    }
+
+}
 
  /* Medium devices (tablets, 768px and up) */
- @media (max-width: 768px) {
-     .scroll {
-         height: 948px;
-     }
+@media (max-width: 768px) {
+    .scroll {
+        height: 948px;
+    }
 
-     .search-container {
-         display: flex;
-         flex-direction: column;
-         margin-top: 3%;
-     }
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3%;
+    }
 
-     .cardzin {
-         height: 180px;
-     }
+    .cardzin img {
+        height: 180px;
+    }
 
-     .text-cardzin h2,
-     h4 {
-         font-size: 20px;
-     }
+    .text-cardzin h2,h4 {
+        font-size: 20px;
+    }
 
-     .text-cardzin h4 {
-         font-weight: 300;
-     }
+    .text-cardzin h4 {
+        font-weight: 300;
+    }
 
-     .text-cardzin p {
-         display: none;
-     }
+    .text-cardzin p {
+        display: none;
+    }
 
      /* container-flip */
 
-     .container-flip {
-         width: 190px;
-         height: 230px;
-     }
+    .container-flip {
+        width: 360px;
+        height: 200px;
+    }
 
-     .front .image {
-         width: 60%;
-         height: 90px;
-         margin-top: 50px;
-     }
-
-     .back p {
-         font-size: .8em;
-         margin: 20px;
-         width: 130px;
+    .back p {
+        font-size: 1em;
+        /* margin: 20px; */
          /* border: 1px solid red; */
-     }
+    }
 
-     .back a {
-         padding: 10px;
-         width: 100px;
-         margin-top: 10%;
-         font-size: .8em;
-     }
+    .back a {
+        padding: 10px;
+        width: 100px;
+        font-size: .8em;
+    }
 
-     .front h1 {
-         font-size: .9em;
-         margin-top: 10%;
-     }
+    .carrossel-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
-     .type-h1 {
-         font-size: 0.6em;
-         margin-top: 10%;
-         text-align: center;
-     }
+    .title-type {
+        margin-right: 8%;
+    }
 
-     .carrossel-container {
-         max-width: 1000px;
-         margin-left: 20px;
-         margin-right: 20px;
-     }
- }
+    .title-type h4 {
+        display: none;
+    }
+}
 
  /* // Large devices (desktops, 992px and up) */
- @media (max-width: 992px) {
-     .scroll {
-         height: 548px;
-     }
+@media (max-width: 992px) {
+    .scroll {
+        height: 548px;
+    }
 
-     .expanded-panel {
-         display: flex;
-         flex-direction: column;
-         margin-top: 3%;
-     }
 
- }
+}
 
  /* // X-Large devices (large desktops, 1200px and up) */
- @media (max-width: 1200px) {
-     .scroll {
-         height: 548px;
-     }
- }
+@media (max-width: 1200px) {
+    .scroll {
+        height: 548px;
+    }
+}
 
  /* // XX-Large devices (larger desktops, 1400px and up) */
- @media (min-width: 1400px) {
-     .cardzin-mobile {
-         display: none;
-     }
- }
+@media (min-width: 1400px) {
+}

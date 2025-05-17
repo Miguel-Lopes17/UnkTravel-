@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mediaquery.css">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- Bibliotecas externas -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Link CSS Swiper -->
@@ -139,214 +141,35 @@
     </section>
 
     <!-- carrosel -->
-    <div class="carrossel-container">
-        <h1>Pacotes</h1> <br>
-        <div class="carrossel">
-            <!-- Card 1 - Rio de Janeiro -->
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide card">
+                <img src="/img/aventura.jpg" alt="">
+                <h2>Nome</h2> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, sequi ipsa. Magnam quod quisquam minima!</p>
+                <div class="description">
+                    <p><i class='bx bxs-star' style='color:#ffae00'></i> 4,2</p>
+                    <p>5/4 dias</p>
+                    <a href="#">+</a>
                 </div>
             </div>
-            <!-- Card 2 - Ontário -->
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 - Paris -->
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
+            <div class="swiper-slide card">Slide 2</div>
+            <div class="swiper-slide card">Slide 3</div>
+            <div class="swiper-slide card">Slide 4</div>
         </div>
 
-        <div class="botoes">
-            <button class="botao anterior">Anterior</button>
-            <button class="botao proximo">Próximo</button>
-        </div>
+        <div class="swiper-pagination"></div>
 
-        <div class="indicadores">
-            <div class="indicador ativo" data-indice="0"></div>
-            <div class="indicador" data-indice="1"></div>
-            <div class="indicador" data-indice="2"></div>
-            <div class="indicador" data-indice="3"></div>
-            <div class="indicador" data-indice="4"></div>
-            <div class="indicador" data-indice="5"></div>
-            <div class="indicador" data-indice="6"></div>
-            <div class="indicador" data-indice="7"></div>
-            <div class="indicador" data-indice="8"></div>
-        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+
+        <div class="swiper-scrollbar"></div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const carrossel = document.querySelector('.carrossel');
-            const cards = document.querySelectorAll('.card');
-            const btnAnterior = document.querySelector('.anterior');
-            const btnProximo = document.querySelector('.proximo');
-            const indicadores = document.querySelectorAll('.indicador');
-
-            let indiceAtual = 0;
-            const totalCards = cards.length;
-
-            // Função para atualizar a posição do carrossel
-            function atualizarCarrossel() {
-                carrossel.style.transform = `translateX(-${indiceAtual * 30}%)`;
-
-                // Atualiza indicadores
-                indicadores.forEach((indicador, index) => {
-                    if (index === indiceAtual) {
-                        indicador.classList.add('ativo');
-                    } else {
-                        indicador.classList.remove('ativo');
-                    }
-                });
-            }
-
-            // Evento para o botão próximo
-            btnProximo.addEventListener('click', function () {
-                indiceAtual = (indiceAtual + 1) % totalCards;
-                atualizarCarrossel();
-            });
-
-            // Evento para o botão anterior
-            btnAnterior.addEventListener('click', function () {
-                indiceAtual = (indiceAtual - 1 + totalCards) % totalCards;
-                atualizarCarrossel();
-            });
-
-            // Eventos para os indicadores
-            indicadores.forEach(indicador => {
-                indicador.addEventListener('click', function () {
-                    indiceAtual = parseInt(this.getAttribute('data-indice'));
-                    atualizarCarrossel();
-                });
-            });
-
-            Opcional: Auto - rotacionar
-            setInterval(() => {
-                indiceAtual = (indiceAtual + 1) % totalCards;
-                atualizarCarrossel();
-            }, 3000);
-        });
-    </script>
     <!-- carrosel -->
 
     <section class="cardzin-cont">
@@ -377,159 +200,10 @@
     </section>
 
     <!-- carrosel -->
-    <div class="carrossel-container">
-        <h1>Hospedagem</h1> <br>
-        <div class="carrossel">
-            <!-- Card 1 - Rio de Janeiro -->
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2 - Ontário -->
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Card 3 - Paris -->
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div id="RJ">
-                    <div class="lugar">
-                        <h2>Rio de Janeiro</h2>
-                    </div>
-                </div>
-                <div class="local">
-                    <div class="detalhes">
-                        <p class="preco">
-                            A partir de: <strong>R$1,200</strong>
-                        </p>
-                        <div class="avaliation">
-                            <p><i class='bx bxs-star' style='color:#ffae00'></i>4,8</p>
-                            <p>5 dias / 4 noites</p>
-                        </div>
-                    </div>
-                    <div class="moreDetalhes">
-                        <a href="#">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="botoes">
-            <button class="botao anterior">Anterior</button>
-            <button class="botao proximo">Próximo</button>
-        </div>
-
-        <div class="indicadores">
-            <div class="indicador ativo" data-indice="0"></div>
-            <div class="indicador" data-indice="1"></div>
-            <div class="indicador" data-indice="2"></div>
-        </div>
-    </div>
     <!-- carrosel -->
 
     <div class="container-dados">
-
         <div class="empresas">
             <div class="img-d">
                 <img src="" alt="">
@@ -579,7 +253,12 @@
     </div>
 
     <div class="type-travel">
-        <h1 class="type-h1">Que tipo de viagem você procura?</h1>
+        <div class="title-type">
+            <h1 class="type-h1">Que tipo de viagem você procura?</h1>
+            <h4 class="type-h3" style="font-weight: 400; color: rgb(71, 70, 70);">Escolha o tipo de viagem que mais
+                combina com você e descubra opções incríveis!</h4>
+        </div>
+
 
         <div class="card-flip" id="type1">
             <div class="container-flip">

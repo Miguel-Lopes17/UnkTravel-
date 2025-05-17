@@ -1,3 +1,5 @@
+
+
 // Constantes
 const CIDADES = [
     "São Paulo (GRU)", "Rio de Janeiro (GIG)", "Salvador (SSA)",
@@ -6,7 +8,7 @@ const CIDADES = [
     "Brasília (BSB)", "Natal (NAT)", "Maceió (MCZ)", "Manaus (MAO)"
 ];
 
-// // Elementos DOM
+
 const headerEl = document.querySelector('.header');
 const mainSearchInput = document.getElementById('mainSearch');
 const expandedPanel = document.getElementById('expandedPanel');
@@ -22,10 +24,10 @@ document.addEventListener('click', handleOutsideClick);
 function initApp() {
     // Foca no campo de busca ao carregar
     mainSearchInput.focus();
-    
+
     // Configura eventos dos botões de viagem
     document.querySelectorAll('.trip-option').forEach(option => {
-        option.addEventListener('click', function() {
+        option.addEventListener('click', function () {
             setActiveOption(this, '.trip-option');
         });
     });
@@ -46,7 +48,7 @@ function handleOutsideClick(e) {
             box.style.display = 'none';
         });
     }
-    
+
     // Fecha o painel se clicar fora
     if (!e.target.closest('.search-container')) {
         if (mainSearchInput.value.length === 0) {
@@ -58,14 +60,14 @@ function handleOutsideClick(e) {
 // Funções de busca
 function handleMainSearch() {
     const searchText = mainSearchInput.value.trim();
-    
+
     if (searchText.length > 0) {
         expandSearchPanel();
         initialSuggestions.style.display = 'none';
         tabsContainer.style.display = 'block';
-        
+
         // Foca no campo relevante baseado no texto
-        if (searchText.toLowerCase().includes('passagem') || 
+        if (searchText.toLowerCase().includes('passagem') ||
             searchText.toLowerCase().includes('voar') ||
             searchText.toLowerCase().includes('avião')) {
             document.getElementById('destinoInput').focus();
@@ -79,7 +81,7 @@ function handleMainSearch() {
 function expandSearchPanel() {
     document.body.classList.add('search-expanded');
     expandedPanel.style.display = 'block';
-    
+
     if (window.innerWidth < 992) {
         createOverlay();
     }
@@ -115,7 +117,7 @@ function changeTab(tabName) {
     if (tabButton) {
         setActiveOption(tabButton, '.tab-button');
     }
-    
+
     // Mostra apenas a aba selecionada
     document.querySelectorAll('[id$="-tab"]').forEach(tab => {
         tab.style.display = tab.id === `${tabName}-tab` ? 'block' : 'none';
@@ -125,12 +127,12 @@ function changeTab(tabName) {
 function showSuggestions(inputElement, suggestionsId) {
     const input = inputElement.value.toLowerCase();
     const suggestionsBox = document.getElementById(suggestionsId);
-    
+
     if (!suggestionsBox) return;
-    
+
     suggestionsBox.innerHTML = '';
     suggestionsBox.style.display = 'none';
-    
+
     if (input.length < 3) {
         if (input.length > 0) {
             suggestionsBox.innerHTML = '<div class="suggestion-item">Digite pelo menos 3 letras</div>';
@@ -138,9 +140,9 @@ function showSuggestions(inputElement, suggestionsId) {
         }
         return;
     }
-    
+
     const matches = CIDADES.filter(cidade => cidade.toLowerCase().includes(input));
-    
+
     if (matches.length > 0) {
         matches.forEach(cidade => {
             const item = document.createElement('div');
@@ -166,5 +168,22 @@ function setActiveOption(activeElement, selector) {
     activeElement.classList.add('active');
 }
 
+
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+// const swiper2 = new Swiper('.swiper2', {
+//       slidesPerView: 4,
+//       spaceBetween: 30,
+//       pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//       },
+//     });
 
 
