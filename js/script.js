@@ -6,7 +6,7 @@ const CIDADES = [
     "Brasília (BSB)", "Natal (NAT)", "Maceió (MCZ)", "Manaus (MAO)"
 ];
 
-// Elementos DOM
+// // Elementos DOM
 const headerEl = document.querySelector('.header');
 const mainSearchInput = document.getElementById('mainSearch');
 const expandedPanel = document.getElementById('expandedPanel');
@@ -166,49 +166,5 @@ function setActiveOption(activeElement, selector) {
     activeElement.classList.add('active');
 }
 
-// Inicialização do Swiper
-document.addEventListener('DOMContentLoaded', function() {
-    const swiperEl = document.querySelector('.card-slider');
-    if (swiperEl) {
-        new Swiper('.card-slider', {
-            loop: true,
-            spaceBetween: 30,
-            slidesPerView: 'auto',
-            centeredSlides: false,
-            
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 15,
-                    centeredSlides: true,
-                    navigation: {
-                        enabled: false
-                    }
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                    navigation: {
-                        enabled: true
-                    }
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                }
-            }
-        });
-    }
-});
 
 

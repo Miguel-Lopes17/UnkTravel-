@@ -384,8 +384,7 @@ a {
     justify-content: center;
     background-color: #3abaff;
     min-width: 15vh;
-    min-height: 12vh;
-    border-radius: 8px;
+    border-radius: 18px;
     transition: .3s;
 }
 
@@ -401,22 +400,7 @@ a {
     text-decoration: none;
     color: #fff;
     font-size: 1.1em;
-
-}
-
-.icon img {
-    width: 30px;
-    height: 30;
-    margin-top: 10px;
-}
-
-.icone {
-    width: 35px;
-    height: 35px;
-}
-
-#promo {
-    filter: invert(100%);
+    padding: 10px;
 }
 
 
@@ -444,6 +428,7 @@ a {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.542);
     color: #fff;
+    user-select: none;
 }
 
 
@@ -690,7 +675,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     width: 100%;
 }
 
@@ -702,10 +687,11 @@ a {
 .container-flip {
     display: block;
     position: relative;
-    width: 290px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     perspective: 1000px;
     /* Adicione isso para melhor efeito 3D */
+    
 }
 
 .flip {
@@ -724,8 +710,7 @@ a {
     transform: rotateY(180deg);
 }
 
-.front,
-.back {
+.front, .back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -736,6 +721,76 @@ a {
 
 .front {
     background: #fff;
+}
+
+.front .type-title {
+    display: flex;
+    align-items: center;
+    margin-top: 79%;
+    background: linear-gradient(transparent, #111111);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 10vh;
+}
+
+.front .type-title h1 {
+    margin-top: 5%;
+    font-size: 1.5em;
+    color: #fff;
+    margin-left: 20px;
+}
+
+#leisure {
+    background-image: url('/img/lazer.jpg');
+    background-size: cover;
+}
+
+#adventure {
+    background-image: url('/img/aventura.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#cultural {
+    background-image: url('/img/cultural.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#gastronomy {
+    background-image: url('/img/gastronomica.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#comfort {
+    background-image: url('/img/bemestar.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#luxe {
+    background-image: url('/img/luxo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#entertainment {
+    background-image: url('/img/entreterimento.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#family {
+    background-image: url('/img/grupo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#romantic {
+    background-image: url('/img/romantico.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .back {
@@ -760,25 +815,7 @@ a {
     border-top: 20px solid #3abaff;
 }
 
-.front h1 {
-    font-size: 1.2em;
-    margin-top: 20px;
-    text-align: center;
-}
 
-.front .image {
-    width: 60%;
-    height: 170px;
-    border-radius: 20px;
-    margin: 0 auto;
-    margin-top: 90px;
-}
-
-.image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
 
 .back p {
     font-size: 1.2em;
