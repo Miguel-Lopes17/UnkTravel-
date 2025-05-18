@@ -407,8 +407,6 @@ a {
     min-height: 70vh;
 }
 
-
-
 .swiper {
     width: 90vw;
     height: 400px;
@@ -488,6 +486,7 @@ a {
     /* gap: 20px; */
     min-height: 50vh;
     gap: 10px;
+    background-color: #3abaff30;
 }
 
 .cardzin {
@@ -498,6 +497,7 @@ a {
     box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     transition: .5s;
+    background-color: #ffffff;
 }
 
 .cardzin:hover {
@@ -569,6 +569,9 @@ a {
     border: 1px solid #d0d0d0;
 }
 
+.mySwiper {
+    background-color: #3abaff30;
+}
 
 /* container-flip */
 
