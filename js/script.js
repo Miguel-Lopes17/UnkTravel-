@@ -169,32 +169,37 @@ function setActiveOption(activeElement, selector) {
 }
 
 
-const swiper = new Swiper('.swiper', {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
+document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-        },
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-        },
-    }
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+        }
+    });
 });
 // const swiper2 = new Swiper('.swiper2', {
 //       slidesPerView: 4,
