@@ -217,16 +217,19 @@
                 </div>
             </div>
 
-            <div class="swiper-pagination" style=" border: 2px solid red;"></div>
+            <div class="swiper-pagination"></div>
 
-            <div class="swiper-button-prev seta"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}              stroke="currentColor" className="size-6">    
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" /></svg>
+            <div class="swiper-button-prev seta"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    strokeWidth={1.5} stroke="currentColor" className="size-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
             </div>
 
 
             <div class="swiper-button-next seta">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                    stroke="currentColor" className="size-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
             </div>
         </div>
@@ -312,12 +315,56 @@
                         <a href="#">+</a>
                     </div>
                 </div>
+
+                <div class="swiper-slide card"><img src="./img/aventura.jpg" alt="">
+                    <h2>Nome</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, sequi ipsa. Magnam quod
+                        quisquam minima!</p>
+                    <div class="description">
+                        <p><i class='bx bxs-star' style='color:#ffae00'></i> 4,2</p>
+                        <p>5/4 dias</p>
+                        <a href="#">+</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide card"><img src="./img/aventura.jpg" alt="">
+                    <h2>Nome</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, sequi ipsa. Magnam quod
+                        quisquam minima!</p>
+                    <div class="description">
+                        <p><i class='bx bxs-star' style='color:#ffae00'></i> 4,2</p>
+                        <p>5/4 dias</p>
+                        <a href="#">+</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide card"><img src="./img/aventura.jpg" alt="">
+                    <h2>Nome</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, sequi ipsa. Magnam quod
+                        quisquam minima!</p>
+                    <div class="description">
+                        <p><i class='bx bxs-star' style='color:#ffae00'></i> 4,2</p>
+                        <p>5/4 dias</p>
+                        <a href="#">+</a>
+                    </div>
+                </div>
             </div>
 
             <div class="swiper-pagination"></div>
 
-            <div class="swiper-button-prev seta"></div>
-            <div class="swiper-button-next seta"></div>
+             <div class="swiper-button-prev seta"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    strokeWidth={1.5} stroke="currentColor" className="size-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
+            </div>
+
+
+            <div class="swiper-button-next seta">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                    stroke="currentColor" className="size-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+            </div>
         </div>
         <!-- carrosel -->
 
@@ -380,21 +427,22 @@
                     </div>
                 </div>
 
+                <div class="swiper-slide cont-slid" style="border: none;"></div>
+                <div class="swiper-slide cont-slid" style="border: none;"></div>
+
             </div>
             <div class="swiper-pagination"></div>
         </div>
 
         <style>
-            .mySwiper {
-                width: 100vw !important;
-                height: 24vw !important;
-                /* border: 2px solid red; */
+            .container-swiper {
+                margin-left: 15%;
             }
 
-            .container-swiper {
-                display: flex !important;
-                justify-content: center !important;
-                align-items: center !important;
+            .mySwiper {
+                width: 100vw;
+                height: auto;
+                padding: 20px 0;
             }
 
             .cont-slide {
@@ -408,21 +456,36 @@
                 background-color: #fcfcfc;
 
             }
+
+
+
+            /* Ajuste para mobile */
+            @media (max-width: 767px) {
+                .swiper-slide {
+                    width: 80% !important;
+                    /* Largura menor em telas pequenas */
+                    margin: 0 auto;
+                    /* Centraliza */
+                }
+            }
         </style>
 
         <script>
-            var cont = new Cont(".mySwiper", {
+            // Correto: "Swiper" (com S maiúsculo)
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,       // Mostra 1 slide por padrão (mobile)
+                spaceBetween: 20,       // Espaço entre slides
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
-                    dynamicBullets: true,
-
-                    breakpoint: {
-                        520: {
-                            slidesPerView: 1,
-                        }
-                    }
                 },
+                breakpoints: {
+                    // Quando a largura for >= 768px, mostra 3 slides
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 30,
+                    }
+                }
             });
         </script>
 

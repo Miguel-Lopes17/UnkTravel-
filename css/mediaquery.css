@@ -19,6 +19,10 @@
         max-width: 50vw;
     }
 
+    .title-type h4 {
+        display: none;
+    }
+
 }
 
  /* Medium devices (tablets, 768px and up) */
@@ -78,7 +82,16 @@
     }
 
     .title-type h4 {
-        display: none;
+        font-size: 1em;
+        margin-bottom: 5%;
+    }
+
+    .type-travel {
+        margin-top: 15%;
+    }
+
+    .type-h1{
+        font-size: 1.7em;
     }
 
     /* Swiper prev-next */
@@ -92,6 +105,14 @@
     .scroll {
         height: 548px;
     }
+
+    .mySwiper {
+        width: 70vh !important;
+    }
+
+     .title-type h4 {
+        margin-bottom: 5%;
+    }
 }
 
  /* // X-Large devices (large desktops, 1200px and up) */
@@ -99,8 +120,15 @@
     .scroll {
         height: 548px;
     }
+
+      .title-type h4 {
+        margin-bottom: 5%;
+    }
 }
 
  /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
+    .cont-slid {
+        display: none !important;
+    }
 }

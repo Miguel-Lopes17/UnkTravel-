@@ -407,6 +407,8 @@ a {
     min-height: 70vh;
 }
 
+
+
 .swiper {
     width: 90vw;
     height: 400px;
@@ -471,6 +473,10 @@ a {
 .swiper-button-prev::after,
 .swiper-button-next::after {
     display: none;
+}
+
+.swiper-pagination {
+    transform: translateY(10px) !important; /* Move 20px para baixo */
 }
 
 /*------------------------------------------------------------------*/
@@ -580,7 +586,7 @@ a {
 
 .type-h1 {
     margin-bottom: 3%;
-    font-size: 2.2vw;
+    font-size: 2.2em;
 }
 
 .card-flip {
