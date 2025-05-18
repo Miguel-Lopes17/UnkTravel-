@@ -80,6 +80,11 @@
     .title-type h4 {
         display: none;
     }
+
+    /* Swiper prev-next */
+    .swiper-button-next , .swiper-button-prev{
+        display: none !important;
+    }
 }
 
  /* // Large devices (desktops, 992px and up) */
@@ -87,8 +92,6 @@
     .scroll {
         height: 548px;
     }
-
-
 }
 
  /* // X-Large devices (large desktops, 1200px and up) */

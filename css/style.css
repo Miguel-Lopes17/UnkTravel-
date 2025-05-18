@@ -402,17 +402,22 @@ a {
     padding: 10px;
 }
 
-/* modificar -----------------------------------------------------------------------------------------------*/
+/*Swiper*/
+.carrosel-container {
+    min-height: 70vh;
+}
+
 .swiper {
     width: 90vw;
-    height: 400px; 
-    overflow: hidden;
+    height: 400px;
+    margin-top: 5%;
 }
+
 .card {
-    border: 2px solid #c1c1c1;
+    border: 2px solid #d9d9d9;
     padding: 15px;
     border-radius: 12px;
-    
+
 }
 
 .card img {
@@ -443,6 +448,22 @@ a {
     color: #fff;
     font-size: 1.7em;
     border-radius: 8px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background: none;
+    /* Remove o fundo padrão */
+    color: #000;
+    /* Cor do ícone */
+    font-size: 24px;
+    /* Tamanho do ícone */
+}
+
+/* Opcional: Remover o pseudo-elemento padrão (seta branca) */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
 }
 
 /*------------------------------------------------------------------*/
@@ -507,33 +528,10 @@ a {
     transition: all 0.3s ease;
 }
 
-.container-dados {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 50vh;
-    gap: 20px;
-}
-
-.empresas,
-.people,
-.avaliacao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 55vh;
-    height: 200px;
-    border: 1px solid #b7b7b7;
-    border-radius: 50px;
-    background-color: #fcfcfc;
-    margin-left: 12px;
-}
 
 .conteudo {
     display: flex;
     font-size: calc(0.5vw + 18px);
-    margin-bottom: 1.2em;
 }
 
 .text-d {
@@ -557,6 +555,7 @@ a {
     border-radius: 50%;
     border: 1px solid #d0d0d0;
 }
+
 
 /* container-flip */
 
