@@ -641,54 +641,54 @@ a {
 }
 
 #leisure {
-    background-image: url('/img/lazer.jpg');
+    background-image: url('../img/lazer.jpg');
     background-size: cover;
 }
 
 #adventure {
-    background-image: url('/img/aventura.jpg');
+    background-image: url('../img/aventura.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #cultural {
-    background-image: url('/img/cultural.jpg');
+    background-image: url('../img/cultural.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #gastronomy {
-    background-image: url('/img/gastronomica.jpg');
+    background-image: url('../img/gastronomica.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #comfort {
-    background-image: url('/img/bemestar.jpg');
+    background-image: url('../img/bemestar.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #luxe {
-    background-image: url('/img/luxo.jpg');
+    background-image: url('../img/luxo.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #entertainment {
-    background-image: url('/img/entreterimento.jpg');
+    background-image: url('../img/entreterimento.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #family {
-    background-image: url('/img/grupo.jpg');
+    background-image: url('../img/grupo.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #romantic {
-    background-image: url('/img/romantico.jpg');
+    background-image: url('../img/romantico.jpg');
     background-size: cover;
     background-position: center;
 }
